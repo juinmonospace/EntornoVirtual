@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://c0342rjvq4nfw"]
+
+[node name="seat" type="Node3D"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -0.148121)
+
+[node name="base" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.119646, -0.194457, 0.359216)
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="base"]
+transform = Transform3D(0.936204, 0.00180588, -0.00261776, -0.00637543, 0.271903, -0.0749885, 0.00203522, 0.0210411, 0.969263, -0.146227, 0.271131, -0.842054)
+inner_radius = 0.001
+outer_radius = 0.164029
+sides = 21
+ring_sides = 15
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="base"]
+transform = Transform3D(-0.975297, 0.00111657, 0.00182282, 0.00772706, -0.0520376, 0.225906, 0.0020212, 0.737735, 0.015932, -0.1406, 0.264775, -0.826565)
+radius = 0.165568
+rings = 16
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base/CSGSphere3D2"]
+transform = Transform3D(1, 2.32831e-10, -1.81899e-12, -4.65661e-10, 1, 4.65661e-10, 0, -7.45058e-09, 1, 0, 0, 0)
+
+[node name="base1" type="CSGBox3D" parent="base"]
+transform = Transform3D(0.0164255, 0.553791, 0.00269572, -5.35084e-11, -0.0988578, 0.0238231, 0.0216131, -0.420869, -0.00204869, -0.14115, 0.0368953, -0.849041)
+size = Vector3(1, 0.537048, 1)
+
+[node name="base2" type="CSGBox3D" parent="base"]
+transform = Transform3D(0.0225624, -0.38678, -0.00188275, -2.14539e-10, -0.0988578, 0.0238231, -0.0150951, -0.578114, -0.00281412, -0.14115, 0.0368953, -0.849041)
+size = Vector3(1, 0.537048, 1)
+
+[node name="baseVertical" type="CSGBox3D" parent="base"]
+transform = Transform3D(0.0271196, 0.00636849, -0.00104575, -0.000206949, 0.70215, 0.000799354, 0.00118726, -0.0230832, 0.0240264, -0.138897, 0.133427, -0.85188)
+size = Vector3(1.104, 0.242, 1.104)
+
+[node name="cushion" type="Node3D" parent="."]
+
+[node name="base3" type="CSGBox3D" parent="cushion"]
+transform = Transform3D(0.0269223, -0.00459002, 0.00308098, 0.000701004, -0.680113, -0.00600148, 0.00340902, 0.176103, -0.0230975, -0.0186486, 0.150219, -0.626321)
+size = Vector3(1, 0.21423, 1)
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="cushion"]
+transform = Transform3D(0.82029, 0.0350336, -0.0265908, -0.0007406, 0.674282, 0.0324011, 0.1717, -0.164464, 0.127177, -0.0363248, 0.324376, -0.685732)
+radius = 0.197391
+rings = 16
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="cushion/CSGSphere3D"]
+transform = Transform3D(1.03362, -1.52737e-07, 5.96046e-08, 2.23517e-08, 0.96117, 4.09782e-08, 0, 4.76837e-07, 1.15583, 0.0648117, -0.00242054, 0.0518537)
+radius = 0.197391
+rings = 16

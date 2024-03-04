@@ -1,0 +1,297 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgomqxheqpxjl"]
+
+[ext_resource type="PackedScene" uid="uid://c0342rjvq4nfw" path="res://seat.tscn" id="1_a8ydh"]
+[ext_resource type="PackedScene" uid="uid://djorh6nafl0ye" path="res://candle.tscn" id="2_xpeie"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.46647, 2.67335, 2.36491)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.09814, 1.8261, 8.51276)
+
+[node name="Room" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01003, 0, -6.12287)
+
+[node name="Seat" parent="Room" instance=ExtResource("1_a8ydh")]
+transform = Transform3D(3.59456, 0, 1.75474, 0, 4, 0, -1.75474, 0, 3.59456, -7.81095, -0.0491362, 8.99696)
+
+[node name="Seat2" parent="Room" instance=ExtResource("1_a8ydh")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -1.3355, -0.124877, 6.60128)
+
+[node name="Cupboard" type="Node3D" parent="Room"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.612931, 2.02262, 8.23061)
+
+[node name="CupboardInner" type="CSGBox3D" parent="Room/Cupboard"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.139699, -1.0254, -0.11865)
+size = Vector3(1.12488, 2.99445, 1.47375)
+
+[node name="Drawer1" type="CSGBox3D" parent="Room/Cupboard/CupboardInner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.139699, -0.234131, 0.118651)
+size = Vector3(1, 0.531738, 1)
+
+[node name="Handle" type="CSGCylinder3D" parent="Room/Cupboard/CupboardInner/Drawer1"]
+transform = Transform3D(-0.017746, -1.01821, 0, 0.48419, -0.0373183, 0, 0, 0, 0.72516, -0.508373, 0, -0.00150418)
+radius = 0.0602336
+height = 0.0363266
+
+[node name="Handleknot" type="CSGSphere3D" parent="Room/Cupboard/CupboardInner/Drawer1/Handle"]
+transform = Transform3D(-0.0755938, 2.06254, 0, -0.980799, -0.0359471, 0, 0, 0, 1.37901, 0.00332952, 0.0431998, 0.00207448)
+radius = 0.0552885
+
+[node name="Drawer2" type="CSGBox3D" parent="Room/Cupboard/CupboardInner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.139699, -0.949869, 0.118651)
+size = Vector3(1, 0.531738, 1)
+
+[node name="Handle" type="CSGCylinder3D" parent="Room/Cupboard/CupboardInner/Drawer2"]
+transform = Transform3D(-0.017746, -1.01821, 0, 0.48419, -0.0373183, 0, 0, 0, 0.72516, -0.508373, 0, -0.00150418)
+radius = 0.0602336
+height = 0.0363266
+
+[node name="Handleknot" type="CSGSphere3D" parent="Room/Cupboard/CupboardInner/Drawer2/Handle"]
+transform = Transform3D(-0.0755938, 2.06254, 0, -0.980799, -0.0359471, 0, 0, 0, 1.37901, 0.00332952, 0.0431998, 0.00207448)
+radius = 0.0552885
+
+[node name="Drawer3" type="CSGBox3D" parent="Room/Cupboard/CupboardInner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.139699, 0.392863, 0.118651)
+size = Vector3(1, 0.531738, 1)
+
+[node name="Handle" type="CSGCylinder3D" parent="Room/Cupboard/CupboardInner/Drawer3"]
+transform = Transform3D(-0.017746, -1.01821, 0, 0.48419, -0.0373183, 0, 0, 0, 0.72516, -0.508373, 0, -0.00150418)
+radius = 0.0602336
+height = 0.0363266
+
+[node name="Handleknot" type="CSGSphere3D" parent="Room/Cupboard/CupboardInner/Drawer3/Handle"]
+transform = Transform3D(-0.0755938, 2.06254, 0, -0.980799, -0.0359471, 0, 0, 0, 1.37901, 0.00332952, 0.0431998, 0.00207448)
+radius = 0.0552885
+
+[node name="Drawer4" type="CSGBox3D" parent="Room/Cupboard/CupboardInner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.139699, 1.0254, 0.118651)
+size = Vector3(1, 0.531738, 1)
+
+[node name="Handle" type="CSGCylinder3D" parent="Room/Cupboard/CupboardInner/Drawer4"]
+transform = Transform3D(-0.017746, -1.01821, 0, 0.48419, -0.0373183, 0, 0, 0, 0.72516, -0.508373, 0, -0.00150418)
+radius = 0.0602336
+height = 0.0363266
+
+[node name="Handleknot" type="CSGSphere3D" parent="Room/Cupboard/CupboardInner/Drawer4/Handle"]
+transform = Transform3D(-0.0755938, 2.06254, 0, -0.980799, -0.0359471, 0, 0, 0, 1.37901, 0.00332952, 0.0431998, 0.00207448)
+radius = 0.0552885
+
+[node name="CupboardOuter" type="CSGBox3D" parent="Room/Cupboard"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.178098, -1.01218, -0.172377)
+size = Vector3(1.06221, 3.14754, 1.61624)
+
+[node name="Lamp" type="Node3D" parent="Room"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.858941, 0, -1.50276)
+
+[node name="LampPlate1" type="CSGTorus3D" parent="Room/Lamp"]
+transform = Transform3D(-1.01961, -0.000643246, 0.00041345, -0.00236237, -0.478954, -0.012136, 0.000394062, -0.00582969, 0.997018, -1.78223, 0.927412, 8.10472)
+inner_radius = 0.254183
+outer_radius = 0.0863061
+sides = 15
+ring_sides = 11
+
+[node name="LampCylinder" type="CSGCylinder3D" parent="Room/Lamp"]
+transform = Transform3D(1.0083, 0, 0, 0, 1.08358, 0, 0, 0, 1.0083, -1.78271, 1.31191, 8.12972)
+radius = 0.0846557
+height = 1.25579
+
+[node name="LampBody" type="Node3D" parent="Room/Lamp"]
+
+[node name="LampTorus3" type="CSGTorus3D" parent="Room/Lamp/LampBody"]
+transform = Transform3D(1.00254, 0.00391883, 0, -0.00624674, 0.628935, 0, 0, 0, 1, -1.78083, 0.592542, 8.14193)
+inner_radius = 0.112132
+outer_radius = 0.001
+sides = 15
+ring_sides = 11
+
+[node name="LampTorus1" type="CSGTorus3D" parent="Room/Lamp/LampBody"]
+transform = Transform3D(1.00254, 0.00391883, 0, -0.00624674, 0.628935, 0, 0, 0, 1, -1.78083, 0.510202, 8.14248)
+inner_radius = 0.15117
+outer_radius = 0.001
+sides = 15
+ring_sides = 11
+
+[node name="LampTorus2" type="CSGTorus3D" parent="Room/Lamp/LampBody"]
+transform = Transform3D(1.00254, 0.00391883, 0, -0.00624674, 0.628935, 0, 0, 0, 1, -1.78083, 0.420203, 8.14866)
+inner_radius = 0.188683
+outer_radius = 0.001
+sides = 15
+ring_sides = 11
+
+[node name="LampTorus4" type="CSGTorus3D" parent="Room/Lamp/LampBody"]
+transform = Transform3D(1.00254, 0.00391883, 0, -0.00624674, 0.628935, 0, 0, 0, 1, -1.78083, 0.324216, 8.14866)
+inner_radius = 0.220617
+outer_radius = 0.001
+sides = 15
+ring_sides = 11
+
+[node name="LampBody2" type="Node3D" parent="Room/Lamp"]
+transform = Transform3D(-0.999975, 0.00697777, 0.000414656, -0.00698234, -0.999901, -0.0121714, 0.000329685, -0.012174, 0.999926, -3.57669, 1.33573, -0.0137691)
+
+[node name="LampTorus3" type="CSGTorus3D" parent="Room/Lamp/LampBody2"]
+transform = Transform3D(1.00254, 0.00391883, 0, -0.00624674, 0.628935, 0, 0, 0, 1, -1.78083, 0.592542, 8.14193)
+inner_radius = 0.112132
+outer_radius = 0.001
+sides = 15
+ring_sides = 11
+
+[node name="LampTorus1" type="CSGTorus3D" parent="Room/Lamp/LampBody2"]
+transform = Transform3D(1.00254, 0.00391883, 0, -0.00624674, 0.628935, 0, 0, 0, 1, -1.78083, 0.510202, 8.14248)
+inner_radius = 0.15117
+outer_radius = 0.001
+sides = 15
+ring_sides = 11
+
+[node name="LampTorus2" type="CSGTorus3D" parent="Room/Lamp/LampBody2"]
+transform = Transform3D(1.00254, 0.00391883, 0, -0.00624674, 0.628935, 0, 0, 0, 1, -1.78083, 0.420203, 8.14866)
+inner_radius = 0.188683
+outer_radius = 0.001
+sides = 15
+ring_sides = 11
+
+[node name="LampTorus4" type="CSGTorus3D" parent="Room/Lamp/LampBody2"]
+transform = Transform3D(1.00254, 0.00391883, -2.91038e-11, -0.00624674, 0.628935, 0, -2.91038e-11, 0, 1, -1.78083, 0.324216, 8.14866)
+inner_radius = 0.220617
+outer_radius = 0.001
+sides = 15
+ring_sides = 11
+
+[node name="LampBody3" type="Node3D" parent="Room/Lamp"]
+transform = Transform3D(-1.01699, 0.00531401, 0.00041345, -0.00710114, -0.761488, -0.012136, 0.000335295, -0.00927124, 0.997018, -3.60386, 1.861, 0.0441561)
+
+[node name="LampTorus3" type="CSGTorus3D" parent="Room/Lamp/LampBody3"]
+transform = Transform3D(1.00254, 0.00391883, 0, -0.00624674, 0.628935, 0, 0, 0, 1, -1.78083, 0.592542, 8.14193)
+inner_radius = 0.112132
+outer_radius = 0.001
+sides = 15
+ring_sides = 11
+
+[node name="LampTorus1" type="CSGTorus3D" parent="Room/Lamp/LampBody3"]
+transform = Transform3D(1.00254, 0.00391883, 0, -0.00624674, 0.628935, 0, 0, 0, 1, -1.78083, 0.510202, 8.14248)
+inner_radius = 0.15117
+outer_radius = 0.001
+sides = 15
+ring_sides = 11
+
+[node name="LampTorus2" type="CSGTorus3D" parent="Room/Lamp/LampBody3"]
+transform = Transform3D(1.00254, 0.00391883, 0, -0.00624674, 0.628935, 0, 0, 0, 1, -1.78083, 0.420203, 8.14866)
+inner_radius = 0.188683
+outer_radius = 0.001
+sides = 15
+ring_sides = 11
+
+[node name="LampTorus4" type="CSGTorus3D" parent="Room/Lamp/LampBody3"]
+transform = Transform3D(1.00254, 0.00391883, 0, -0.00624674, 0.628935, 0, 0, 0, 1, -1.78083, 0.324216, 8.14866)
+inner_radius = 0.220617
+outer_radius = 0.001
+sides = 15
+ring_sides = 11
+
+[node name="Walls" type="Node3D" parent="Room"]
+
+[node name="Wall1" type="CSGBox3D" parent="Room/Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.40381, 1.5777, 0.629638)
+size = Vector3(17, 7, 1)
+
+[node name="Painting" type="CSGBox3D" parent="Room/Walls/Wall1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.52109, 0.867746, 1.82991)
+size = Vector3(2.64111, 2.67493, 0.254883)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Room/Walls/Wall1/Painting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0140991, 0.00723267, -0.141113)
+size = Vector3(2.34753, 2.27631, 0.717773)
+
+[node name="Candle2" parent="Room/Walls/Wall1" instance=ExtResource("2_xpeie")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.728507, 0, -0.669157)
+
+[node name="Wall5" type="CSGBox3D" parent="Room/Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.40381, 1.5777, 16.889)
+visible = false
+size = Vector3(17, 7, 1)
+
+[node name="Wall2" type="CSGBox3D" parent="Room/Walls"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.10008, 1.5777, 8.90466)
+size = Vector3(17, 7, 1)
+
+[node name="Wall3" type="CSGBox3D" parent="Room/Walls"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14.3913, 1.5777, 3.43521)
+size = Vector3(6.0611, 7, 1)
+
+[node name="Candle" parent="Room/Walls/Wall3" instance=ExtResource("2_xpeie")]
+
+[node name="Wall6" type="CSGBox3D" parent="Room/Walls"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14.3913, 1.5777, 14.3514)
+visible = false
+size = Vector3(6.0611, 7, 1)
+
+[node name="Wall4" type="CSGBox3D" parent="Room/Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, -0.000401426, 0, 0.000401426, 1, -15.3131, 1.5777, 6.32217)
+size = Vector3(2.85391, 7, 1)
+
+[node name="Wall7" type="CSGBox3D" parent="Room/Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7408, 1.5777, 11.689)
+visible = false
+size = Vector3(5.70926, 7, 1)
+
+[node name="Staircase" type="Node3D" parent="Room"]
+
+[node name="Step1" type="CSGBox3D" parent="Room/Staircase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.389, -1.746, 9.20131)
+size = Vector3(1, 0.393555, 5.05022)
+
+[node name="Step3" type="CSGBox3D" parent="Room/Staircase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.7127, -0.869331, 9.20131)
+size = Vector3(1.25439, 0.393555, 5.05022)
+
+[node name="Step4" type="CSGBox3D" parent="Room/Staircase"]
+transform = Transform3D(0.993415, 0, -0.114573, 0, 1, 0, 0.114573, 0, 0.993415, -16.2532, -0.438202, 8.94793)
+size = Vector3(1.25439, 0.393555, 5.05022)
+
+[node name="Step5" type="CSGBox3D" parent="Room/Staircase"]
+transform = Transform3D(0.95447, 0, -0.298308, 0, 1, 0, 0.298308, 0, 0.95447, -16.8812, -0.0070715, 8.67436)
+size = Vector3(1.25439, 0.393555, 5.05022)
+
+[node name="Step6" type="CSGBox3D" parent="Room/Staircase"]
+transform = Transform3D(0.882045, 0, -0.471166, 0, 1, 0, 0.471166, 0, 0.882045, -17.543, 0.447272, 8.38606)
+size = Vector3(1.25439, 0.393555, 5.05022)
+
+[node name="Step7" type="CSGBox3D" parent="Room/Staircase"]
+transform = Transform3D(0.760791, 0, -0.648997, 0, 1, 0, 0.648997, 0, 0.760791, -18.3996, 1.03217, 8.47794)
+size = Vector3(2.17786, 0.393555, 5.05022)
+
+[node name="Step8" type="CSGBox3D" parent="Room/Staircase"]
+transform = Transform3D(0.660565, 0, -0.750769, 0, 1, 0, 0.750769, 0, 0.660565, -18.7004, 1.7632, 8.14509)
+size = Vector3(2.17786, 0.393555, 5.05022)
+
+[node name="Step9" type="CSGBox3D" parent="Room/Staircase"]
+transform = Transform3D(0.533039, 0, -0.846091, 0, 1, 0, 0.846091, 0, 0.533039, -18.7004, 2.45519, 8.14509)
+size = Vector3(2.17786, 0.393555, 5.05022)
+
+[node name="Step10" type="CSGBox3D" parent="Room/Staircase"]
+transform = Transform3D(0.376823, 0, -0.926286, 0, 1, 0, 0.926286, 0, 0.376823, -18.7004, 3.0195, 8.08388)
+size = Vector3(2.17786, 0.393555, 5.05022)
+
+[node name="Step11" type="CSGBox3D" parent="Room/Staircase"]
+transform = Transform3D(0.342922, 0, -0.939364, 0, 1, 0, 0.939364, 0, 0.342922, -18.9209, 3.38309, 7.67745)
+size = Vector3(2.17786, 0.393555, 5.05022)
+
+[node name="Step12" type="CSGBox3D" parent="Room/Staircase"]
+transform = Transform3D(0.185101, 0, -0.98272, 0, 1, 0, 0.98272, 0, 0.185101, -19.4728, 3.69867, 6.28065)
+size = Vector3(2.17786, 0.393555, 5.05022)
+
+[node name="Step13" type="CSGBox3D" parent="Room/Staircase"]
+transform = Transform3D(0.046201, -0.00346244, -0.998926, 0.00095661, 0.999994, -0.0034219, 0.998932, -0.000797496, 0.046204, -19.3313, 4.09868, 5.80305)
+size = Vector3(2.17786, 0.393555, 5.09042)
+
+[node name="Step2" type="CSGBox3D" parent="Room/Staircase"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -14.9574, -1.34513, 9.20131)
+size = Vector3(0.554565, 0.393555, 5.05022)
+
+[node name="UpperFloor" type="Node3D" parent="Room"]
+
+[node name="Floor" type="CSGBox3D" parent="Room/UpperFloor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.9635, 4.21573, -3.59002)
+size = Vector3(20.1087, 0.318359, 16.0175)
