@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyt7clknaaemw"]
+
+[ext_resource type="Script" path="res://Scripts/CameraOrbital.gd" id="1_8expy"]
+[ext_resource type="PackedScene" uid="uid://c0342rjvq4nfw" path="res://Stool.tscn" id="2_qvtf2"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="Camera3D" type="Camera3D" parent="Camera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.483487, 0)
+script = ExtResource("1_8expy")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Interior" type="Node3D" parent="."]
+
+[node name="Stool" parent="Interior" instance=ExtResource("2_qvtf2")]
+transform = Transform3D(4, 0, 0, 0, 3.97388, -0.45635, 0, 0.45635, 3.97388, 0, 0, -0.794047)
+
+[node name="Stool2" parent="Interior" instance=ExtResource("2_qvtf2")]
+transform = Transform3D(4, 0, 0, 0, 3.97388, -0.45635, 0, 0.45635, 3.97388, 2, 0, -4.79405)
+
+[node name="Stool3" parent="Interior" instance=ExtResource("2_qvtf2")]
+transform = Transform3D(1.92542, 0.400002, 3.48321, 0, 3.97388, -0.45635, -3.5061, 0.219667, 1.91285, -5.58333, 0, -4.79405)
+
+[node name="Stool4" parent="Interior" instance=ExtResource("2_qvtf2")]
+transform = Transform3D(2.93634, 0.309888, 2.69849, -1.28428e-09, 3.97388, -0.45635, -2.71623, 0.335, 2.91717, -3.6042, 0, -7.13403)
+
+[node name="RoomSkeleton" type="Node3D" parent="."]
+
+[node name="Walls" type="Node3D" parent="RoomSkeleton"]
+
+[node name="Wall1" type="CSGBox3D" parent="RoomSkeleton/Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4753, 2.14015, -3.80991)
+size = Vector3(0.321777, 5.67163, 12.6196)
+
+[node name="Wall2" type="CSGBox3D" parent="RoomSkeleton/Walls"]
+transform = Transform3D(-0.000176985, -0.00100665, 0.999999, -0.000125511, 0.999999, 0.00100662, -1, -0.000125331, -0.000177113, -2.52347, 1.88118, -10.2441)
+size = Vector3(0.321777, 6.18024, 18.1418)
+
+[node name="Wall3" type="CSGBox3D" parent="RoomSkeleton/Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.40685, 2.04507, -4.01427)
+size = Vector3(0.321777, 5.87573, 12.8342)
+
+[node name="Wall4" type="CSGBox3D" parent="RoomSkeleton/Walls"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.50337, 2.14015, 2.40748)
+size = Vector3(0.321777, 5.67163, 17.7146)
+
+[node name="Ceiling" type="Node3D" parent="RoomSkeleton"]
+
+[node name="Ceiling1" type="CSGBox3D" parent="RoomSkeleton/Ceiling"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.45389, 4.81215, -3.88389)
+size = Vector3(17.8904, 0.125977, 12.9758)
+
+[node name="Floor" type="Node3D" parent="RoomSkeleton"]
+
+[node name="Floor1" type="CSGBox3D" parent="RoomSkeleton/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.48891, -0.67013, -3.9171)
+size = Vector3(17.331, 0.125977, 13.0422)

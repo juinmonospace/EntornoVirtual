@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://cil8g0aw16so8"]
+
+[node name="Table" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.04408, 0, 9.25124)
+
+[node name="Plate1" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.169825, 0.287776, 0.230202)
+size = Vector3(1.42627, 0.052994, 4.36761)
+
+[node name="Plate2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.146484, 0.171125, 0.265633)
+size = Vector3(1.29297, 0.174507, 4.19653)
+
+[node name="Foot1" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.992404, 0, 0, 0, 1, 0.314, -0.737953, -1.677)
+radius = 0.0713716
+height = 2.06798
+
+[node name="Deco1" type="CSGCylinder3D" parent="Foot1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.575869, 0)
+radius = 0.167796
+height = 0.760986
+
+[node name="Deco2" type="CSGCylinder3D" parent="Foot1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0838783, 0)
+radius = 0.113664
+height = 0.47409
+
+[node name="Deco3" type="CSGCylinder3D" parent="Foot1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.407171, 0)
+radius = 0.0917261
+height = 0.47409
+
+[node name="Foot2" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.992404, 0, 0, 0, 1, -0.567571, -0.737953, -1.677)
+radius = 0.0713716
+height = 2.06798
+
+[node name="Deco1" type="CSGCylinder3D" parent="Foot2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.575869, 0)
+radius = 0.167796
+height = 0.760986
+
+[node name="Deco2" type="CSGCylinder3D" parent="Foot2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0838783, 0)
+radius = 0.113664
+height = 0.47409
+
+[node name="Deco3" type="CSGCylinder3D" parent="Foot2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.407171, 0)
+radius = 0.0917261
+height = 0.47409
+
+[node name="Foot3" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.992404, 0, 0, 0, 1, -0.567571, -0.737953, 2.17421)
+radius = 0.0713716
+height = 2.06798
+
+[node name="Deco1" type="CSGCylinder3D" parent="Foot3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.575869, 0)
+radius = 0.167796
+height = 0.760986
+
+[node name="Deco2" type="CSGCylinder3D" parent="Foot3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0838783, 0)
+radius = 0.113664
+height = 0.47409
+
+[node name="Deco3" type="CSGCylinder3D" parent="Foot3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.407171, 0)
+radius = 0.0917261
+height = 0.47409
+
+[node name="Foot4" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.992404, 0, 0, 0, 1, 0.30417, -0.737953, 2.17421)
+radius = 0.0713716
+height = 2.06798
+
+[node name="Deco1" type="CSGCylinder3D" parent="Foot4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.575869, 0)
+radius = 0.167796
+height = 0.760986
+
+[node name="Deco2" type="CSGCylinder3D" parent="Foot4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0838783, 0)
+radius = 0.113664
+height = 0.47409
+
+[node name="Deco3" type="CSGCylinder3D" parent="Foot4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.407171, 0)
+radius = 0.0917261
+height = 0.47409

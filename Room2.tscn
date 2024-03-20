@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=3 uid="uid://ciq1kixgbklog"]
+
+[ext_resource type="PackedScene" uid="uid://ovgqdborvrep" path="res://UpperFloorSphereWalls.tscn" id="1_b2lnf"]
+[ext_resource type="PackedScene" uid="uid://c0342rjvq4nfw" path="res://Stool.tscn" id="2_c7qqs"]
+
+[node name="Room2" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.644431, 0, 0.764663, 0, 1, 0, -0.764663, 0, 0.644431, 7.04891, 6.09641, -1.65378)
+fov = 115.0
+
+[node name="Room" type="Node3D" parent="."]
+
+[node name="Skeleton" type="Node3D" parent="Room"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5465, 0, -6.12287)
+
+[node name="Floor" type="CSGBox3D" parent="Room/Skeleton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.886, 4.90475, -4.30763)
+size = Vector3(25.7135, 0.318359, 24.1163)
+
+[node name="SphereWallOuter" parent="Room/Skeleton" instance=ExtResource("1_b2lnf")]
+
+[node name="DoorHole1" type="CSGCylinder3D" parent="Room/Skeleton/SphereWallOuter"]
+transform = Transform3D(0.71048, 0.703717, -3.07605e-08, 0, -4.37114e-08, -1, -0.703717, 0.71048, -3.10561e-08, 9.38633, 1.85214, 6.75535)
+operation = 2
+radius = 2.47462
+height = 4.21821
+
+[node name="DoorHole2" type="CSGCylinder3D" parent="Room/Skeleton/SphereWallOuter"]
+transform = Transform3D(-0.797552, -0.60325, 2.63689e-08, -3.70215e-17, -4.37114e-08, -1, 0.60325, -0.797552, 3.48621e-08, -7.36158, 2.07853, -8.10687)
+operation = 2
+radius = 2.47462
+height = 4.21821
+
+[node name="WindowHole1" type="CSGCylinder3D" parent="Room/Skeleton/SphereWallOuter"]
+transform = Transform3D(0.978878, -0.204445, 8.93657e-09, 0, -4.37114e-08, -1, 0.204445, 0.978878, -4.27881e-08, -1.63959, 5.97766, 9.5678)
+operation = 2
+radius = 1.14307
+height = 4.94489
+
+[node name="WindowHole2" type="CSGCylinder3D" parent="Room/Skeleton/SphereWallOuter"]
+transform = Transform3D(-0.589068, 0.690083, 0.420458, 0.27143, 0.659055, -0.701407, -0.761134, -0.299052, -0.575537, 5.27148, 8.78633, -6.38807)
+operation = 2
+radius = 2.28186
+height = 3.92149
+sides = 11
+
+[node name="WindowHole3" type="CSGCylinder3D" parent="Room/Skeleton/SphereWallOuter"]
+transform = Transform3D(-0.904173, 0.154601, 0.398208, 0.264112, 0.935, 0.236688, -0.335732, 0.319178, -0.886233, 0.957889, 11.9525, -0.0371017)
+operation = 2
+radius = 3.86337
+height = 4.95668
+sides = 11
+
+[node name="WindowHole4" type="CSGCylinder3D" parent="Room/Skeleton/SphereWallOuter"]
+transform = Transform3D(-0.511349, -0.578999, 0.635046, -0.243906, 0.806357, 0.538793, -0.824034, 0.120619, -0.553551, -8.22044, 8.81637, 2.70281)
+operation = 2
+radius = 2.939
+height = 4.57858
+sides = 11
+
+[node name="Interior" type="Node3D" parent="Room"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 6, -10)
+
+[node name="Stool1" parent="Room/Interior" instance=ExtResource("2_c7qqs")]
+transform = Transform3D(3.50353, -0.379259, -1.89246, 0.141023, 3.96183, -0.532894, 1.92493, 0.400033, 3.48347, 1.47608, -0.469563, -2.28608)
+
+[node name="Stool2" parent="Room/Interior" instance=ExtResource("2_c7qqs")]
+transform = Transform3D(4, 0, 0, 0, 3.97388, -0.45635, 0, 0.45635, 3.97388, 0, -0.183676, -1.79405)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.296143, 8.8596, -3.74239)

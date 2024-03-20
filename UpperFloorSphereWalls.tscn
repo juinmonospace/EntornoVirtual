@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ovgqdborvrep"]
+
+[node name="SphereWallOuter" type="CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.9635, 4.90475, -3.7397)
+radius = 13.3729
+
+[node name="EliminateHalf" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.24469, -6.8473, -1.69693)
+operation = 2
+size = Vector3(22.8741, 14.2566, 34.3506)
+
+[node name="SphereWallInner" type="CSGSphere3D" parent="."]
+operation = 2
+radius = 11.4571
+
+[node name="EliminateHalf" type="CSGBox3D" parent="SphereWallInner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.24469, -6.8473, -1.69693)
+operation = 2
+size = Vector3(22.8741, 14.2566, 34.3506)

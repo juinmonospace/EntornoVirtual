@@ -17,7 +17,7 @@ sides = 13
 ring_sides = 10
 
 [node name="CandleWax" type="CSGCylinder3D" parent="CandlePlate2"]
-transform = Transform3D(1.11111, 0, 7.10543e-15, 0, 4.6107, 0, 3.55271e-15, 0, 0.714286, -0.17089, 3.11099, 0.510188)
+transform = Transform3D(1.11111, 0, 7.10543e-15, 0, 4.6107, 0, 3.55271e-15, 0, 0.714286, -0.17089, 3.11099, 0.0446286)
 radius = 0.154692
 height = 1.09436
 
@@ -27,5 +27,10 @@ radius = 0.0373959
 height = 0.51559
 
 [node name="CandleLight" type="SpotLight3D" parent="CandlePlate2/CandleWax"]
-transform = Transform3D(1, -4.3673e-08, 4.55426e-08, 4.3673e-08, -0.0418931, -0.999122, 4.55426e-08, 0.999122, -0.0418931, 0.0211318, 0.279957, 0.372514)
+transform = Transform3D(1, -4.36731e-08, 4.55427e-08, 4.3673e-08, -0.0418931, -0.999121, 4.55426e-08, 0.999122, -0.0418931, 0.021, 0.84605, -0.0146712)
 light_color = Color(0.866667, 0.952941, 0, 1)
+
+[node name="EliminateHalf" type="CSGBox3D" parent="CandlePlate2"]
+transform = Transform3D(1.11111, 0, 0, 0, 4.6107, 0, 0, 0, 0.714286, -0.0492493, 0.0575612, -0.582111)
+operation = 2
+size = Vector3(2.1, 0.507, 1.345)

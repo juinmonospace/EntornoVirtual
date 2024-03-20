@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bcl02eg7gbhul"]
+
+[node name="Cupboard" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.612931, 0.860913, 8.23061)
+
+[node name="CupboardInner" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.139699, -1.0254, -0.145466)
+size = Vector3(1.12488, 2.99445, 1.42012)
+
+[node name="Drawer2" type="CSGBox3D" parent="CupboardInner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.139699, -0.949869, -0.0548935)
+size = Vector3(1, 0.531738, 1)
+
+[node name="Handle" type="CSGCylinder3D" parent="CupboardInner/Drawer2"]
+transform = Transform3D(-0.017746, -1.01821, 0, 0.48419, -0.0373183, 0, 0, 0, 0.72516, -0.508373, 0, -0.00150418)
+radius = 0.0602336
+height = 0.0363266
+
+[node name="Handleknot" type="CSGSphere3D" parent="CupboardInner/Drawer2/Handle"]
+transform = Transform3D(-0.0755938, 2.06254, 0, -0.980799, -0.0359471, 0, 0, 0, 1.37901, 0.00332952, 0.0431998, 0.00207448)
+radius = 0.0552885
+
+[node name="Drawer3" type="CSGBox3D" parent="CupboardInner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.139699, -0.203618, -0.0548935)
+size = Vector3(1, 0.531738, 1)
+
+[node name="Handle" type="CSGCylinder3D" parent="CupboardInner/Drawer3"]
+transform = Transform3D(-0.017746, -1.01821, 0, 0.48419, -0.0373183, 0, 0, 0, 0.72516, -0.508373, 0, -0.00150418)
+radius = 0.0602336
+height = 0.0363266
+
+[node name="Handleknot" type="CSGSphere3D" parent="CupboardInner/Drawer3/Handle"]
+transform = Transform3D(-0.0755938, 2.06254, 0, -0.980799, -0.0359471, 0, 0, 0, 1.37901, 0.00332952, 0.0431998, 0.00207448)
+radius = 0.0552885
+
+[node name="Drawer4" type="CSGBox3D" parent="CupboardInner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.139699, 0.397857, -0.0548935)
+size = Vector3(1, 0.531738, 1)
+
+[node name="Handle" type="CSGCylinder3D" parent="CupboardInner/Drawer4"]
+transform = Transform3D(-0.017746, -1.01821, 0, 0.48419, -0.0373183, 0, 0, 0, 0.72516, -0.508373, 0, -0.00150418)
+radius = 0.0602336
+height = 0.0363266
+
+[node name="Handleknot" type="CSGSphere3D" parent="CupboardInner/Drawer4/Handle"]
+transform = Transform3D(-0.0755938, 2.06254, 0, -0.980799, -0.0359471, 0, 0, 0, 1.37901, 0.00332952, 0.0431998, 0.00207448)
+radius = 0.0552885
+
+[node name="Drawer5" type="CSGBox3D" parent="CupboardInner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.139699, 1.03458, -0.0548935)
+size = Vector3(1, 0.531738, 1)
+
+[node name="Handle" type="CSGCylinder3D" parent="CupboardInner/Drawer5"]
+transform = Transform3D(-0.017746, -1.01821, 0, 0.48419, -0.0373183, 0, 0, 0, 0.72516, -0.508373, 0, -0.00150418)
+radius = 0.0602336
+height = 0.0363266
+
+[node name="Handleknot" type="CSGSphere3D" parent="CupboardInner/Drawer5/Handle"]
+transform = Transform3D(-0.0755938, 2.06254, 0, -0.980799, -0.0359471, 0, 0, 0, 1.37901, 0.00332952, 0.0431998, 0.00207448)
+radius = 0.0552885
+
+[node name="CupboardOuter" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.178098, -1.01218, -0.172377)
+size = Vector3(1.06221, 3.14754, 1.61624)
