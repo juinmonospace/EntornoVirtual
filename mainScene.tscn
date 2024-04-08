@@ -1,0 +1,83 @@
+[gd_scene load_steps=9 format=3 uid="uid://dibth5lpalq8a"]
+
+[ext_resource type="PackedScene" uid="uid://nefn6r2egq0u" path="res://BLENDER/dresserMOD.glb" id="1_rq2vj"]
+[ext_resource type="PackedScene" uid="uid://bryh3lket6x75" path="res://BLENDER/staircaseMOD.glb" id="1_x5v5f"]
+[ext_resource type="PackedScene" uid="uid://byyhomk202dvx" path="res://BLENDER/chairMOD.glb" id="3_2ecg1"]
+[ext_resource type="PackedScene" uid="uid://o5oaeyjcsxsd" path="res://BLENDER/lamp1MOD.glb" id="5_2mafl"]
+[ext_resource type="Script" path="res://Scripts/AnimateChair.gd" id="5_hb4rx"]
+[ext_resource type="PackedScene" uid="uid://bpx2cktfwcgj1" path="res://IMPORTED/Indoor plant_3_BI_blend.glb" id="5_mx5y5"]
+
+[sub_resource type="Animation" id="Animation_awq1n"]
+resource_name = "MoveChair"
+length = 5.0
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0.3, 1, 5.80316, 1.20495, -1.73172, 0.6, 1, 5.80316, 1.20495, 0.531328, 0.9, 1, 5.80316, 1.20495, 1.79471, 1.2, 1, 6.51258, 1.20495, 1.79471, 1.5, 1, 7.51942, 1.20495, 0.0344329, 1.8, 1, 8.75644, 1.20495, -1.12213, 2.1, 1, 9.91792, 1.20495, -3.20129, 2.4, 1, 11.7834, 1.20495, -4.15382, 2.7, 1, 13.6963, 1.20495, -5.15104, 3, 1, 16.1386, 1.20495, -7.31731, 3.3, 1, 13.3372, 1.20495, -9.85583, 3.6, 1, 9.44257, 1.20495, -10.6261, 3.9, 1, 6.56285, 1.20495, -8.21867, 4.2, 1, 5.25856, 1.20495, -6.02641, 4.5, 1, 4.41171, 1.20495, -4.92638, 4.8, 1, 5.0704, 1.20495, -2.36242)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wlwnr"]
+_data = {
+"MoveChair": SubResource("Animation_awq1n")
+}
+
+[node name="Scene" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.928045, 0, -0.372468, 0, 1, 0, 0.372468, 0, 0.928045, 3.33551, 1.17567, 5.48985)
+
+[node name="Building" type="Node3D" parent="."]
+
+[node name="Skeleton" type="Node3D" parent="Building"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Building/Skeleton"]
+
+[node name="staircaseMOD" parent="Building/Skeleton" instance=ExtResource("1_x5v5f")]
+transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 0, 0, 0)
+
+[node name="Interior" type="Node3D" parent="Building"]
+
+[node name="Room1" type="Node3D" parent="Building/Interior"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="dresserMOD2" parent="Building/Interior/Room1" instance=ExtResource("1_rq2vj")]
+transform = Transform3D(-0.795876, 0, 0.0811227, 0, 0.8, 0, -0.0811227, 0, -0.795876, 25.6833, 1.42427, 1.5771)
+
+[node name="dresserMOD" parent="Building/Interior/Room1" instance=ExtResource("1_rq2vj")]
+transform = Transform3D(-0.00610149, 0, -0.799977, 0, 0.8, 0, 0.799977, 0, -0.00610149, 16.9575, 1.42427, -12.1589)
+
+[node name="chairMOD" parent="Building/Interior/Room1" instance=ExtResource("3_2ecg1")]
+transform = Transform3D(-0.0786776, 0, 0.796121, 0, 0.8, 0, -0.796121, 0, -0.0786776, 5.0704, 1.20495, -2.36242)
+script = ExtResource("5_hb4rx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Building/Interior/Room1/chairMOD"]
+libraries = {
+"": SubResource("AnimationLibrary_wlwnr")
+}
+
+[node name="lamp1MOD2" parent="Building/Interior/Room1" instance=ExtResource("5_2mafl")]
+transform = Transform3D(0.28, 0, 0, 0, 0.28, 0, 0, 0, 0.28, 1.59859, 0, -12.8692)
+
+[node name="lamp1MOD" parent="Building/Interior/Room1" instance=ExtResource("5_2mafl")]
+transform = Transform3D(0.28, 0, 0, 0, 0.28, 0, 0, 0, 0.28, 23.2036, 0, -12.948)
+
+[node name="Room2" type="Node3D" parent="Building/Interior"]
+
+[node name="chairMOD2" parent="Building/Interior/Room2" instance=ExtResource("3_2ecg1")]
+transform = Transform3D(0.87597, 0, -0.482365, 0, 1, 0, 0.482365, 0, 0.87597, -10.1745, 9.72219, -13.7375)
+
+[node name="chairMOD3" parent="Building/Interior/Room2" instance=ExtResource("3_2ecg1")]
+transform = Transform3D(-0.91227, 0, 0.409589, 0, 1, 0, -0.409589, 0, -0.91227, -16.8421, 9.72219, -12.6311)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="Indoor plant_3_BI_blend" parent="MeshInstance3D" instance=ExtResource("5_mx5y5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.225144, 8.59774, -3.66332)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4843, 4.0521, -0.483266)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4843, 4.0521, 2.51673)
