@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bm132ytsww43a"
-path="res://.godot/imported/Indoor plant_3_BI_blend1.glb-3295e777e39a84d566d3e3466b8f121f.scn"
+uid="uid://vgrm12dsl826"
+path="res://.godot/imported/cabinet.glb-35b1d7aa7fb8a4172de014e33ab92654.scn"
 
 [deps]
 
-source_file="res://IMPORTED/Indoor plant_3_BI_blend1.glb"
-dest_files=["res://.godot/imported/Indoor plant_3_BI_blend1.glb-3295e777e39a84d566d3e3466b8f121f.scn"]
+source_file="res://IMPORTED/cabinet.glb"
+dest_files=["res://.godot/imported/cabinet.glb-35b1d7aa7fb8a4172de014e33ab92654.scn"]
 
 [params]
 
